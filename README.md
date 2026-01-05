@@ -65,17 +65,52 @@ Tools from the [Agentic Coding Flywheel Setup](https://github.com/Dicklesworthst
 
 ## Installation
 
-### Quick Install
+### One-Line Install (Recommended)
+
+Install all skills instantly:
+
+```bash
+curl -fsSL "https://raw.githubusercontent.com/Dicklesworthstone/agent_flywheel_clawdbot_skills_and_integrations/main/install.sh?v=$(date +%s)" | bash -s -- --all
+```
+
+Or pick skills interactively:
+
+```bash
+curl -fsSL "https://raw.githubusercontent.com/Dicklesworthstone/agent_flywheel_clawdbot_skills_and_integrations/main/install.sh?v=$(date +%s)" | bash
+```
+
+The installer will:
+- Auto-detect your Clawdbot skills directory (`~/clawd/skills` or `~/.clawdbot/skills`)
+- Show a categorized menu to pick specific skills (or `--all` to install everything)
+- Generate the config snippet for your `clawdbot.json`
+
+#### Installer Options
+
+```bash
+# Install all skills
+curl ... | bash -s -- --all
+
+# Install to custom directory
+curl ... | bash -s -- --dest ~/my-skills
+
+# List available skills
+curl ... | bash -s -- --list
+
+# Uninstall all Agent Flywheel skills
+curl ... | bash -s -- --uninstall
+
+# Show help
+curl ... | bash -s -- --help
+```
+
+### Git Clone Install
 
 ```bash
 # Clone to your skills directory
 git clone https://github.com/Dicklesworthstone/agent_flywheel_clawdbot_skills_and_integrations.git ~/clawdbot-skills
 
-# Symlink to clawdbot workspace
-mkdir -p ~/.clawdbot/skills
-for skill in ~/clawdbot-skills/skills/*/; do
-  ln -sf "$skill" ~/.clawdbot/skills/
-done
+# Run the installer
+cd ~/clawdbot-skills && ./install.sh --all
 ```
 
 ### Manual Install
