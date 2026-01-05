@@ -35,6 +35,12 @@ Tools from the [Agentic Coding Flywheel Setup](https://github.com/Dicklesworthst
 | **[vercel](skills/vercel/SKILL.md)** | Vercel deployments, domains, env vars | "Deploy to production" |
 | **[supabase](skills/supabase/SKILL.md)** | Supabase DB, migrations, Edge Functions, storage | "Run migrations and generate types" |
 
+### Browser Automation
+
+| Skill | Description | Use Case |
+|-------|-------------|----------|
+| **[claude-chrome](skills/claude-chrome/SKILL.md)** | Claude in Chrome - control your authenticated browser, automate workflows, fill forms, extract data | "Open Gmail and draft replies to unread emails" |
+
 ### Development Tools
 
 | Skill | Description | Use Case |
