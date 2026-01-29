@@ -114,15 +114,15 @@ print_banner() {
 }
 
 log_info() {
-    echo -e "${BLUE}ℹ${RESET}  $1"
+    echo -e "${BLUE}ℹ${RESET}  $1" >&2
 }
 
 log_success() {
-    echo -e "${GREEN}✓${RESET}  $1"
+    echo -e "${GREEN}✓${RESET}  $1" >&2
 }
 
 log_warn() {
-    echo -e "${YELLOW}⚠${RESET}  $1"
+    echo -e "${YELLOW}⚠${RESET}  $1" >&2
 }
 
 log_error() {
@@ -130,7 +130,7 @@ log_error() {
 }
 
 log_step() {
-    echo -e "${CYAN}→${RESET}  $1"
+    echo -e "${CYAN}→${RESET}  $1" >&2
 }
 
 has_command() {
