@@ -163,9 +163,11 @@ detect_skills_dir() {
         return
     fi
 
-    # Check common locations
+    # Check common locations in priority order
     if [[ -d "$HOME/clawd/skills" ]]; then
         echo "$HOME/clawd/skills"
+    elif [[ -d "$HOME/.openclaw/skills" ]]; then
+        echo "$HOME/.openclaw/skills"
     elif [[ -d "$HOME/.clawdbot/skills" ]]; then
         echo "$HOME/.clawdbot/skills"
     else
